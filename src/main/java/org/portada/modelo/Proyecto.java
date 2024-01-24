@@ -3,6 +3,7 @@ package org.portada.modelo;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -27,7 +28,7 @@ public class Proyecto {
 
     @ManyToMany
     @JoinColumn(name = "departamentos")
-    private Collection<Departamento> departamentos;
+    private Collection<Departamento> departamentos = new ArrayList<>();
 
     //endregion
 

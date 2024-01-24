@@ -2,6 +2,7 @@ package org.portada.modelo;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public class Sede {
     //region Relaciones
 
     @OneToMany(mappedBy = "sede")
-    private Collection<Departamento> departamentos;
+    private Collection<Departamento> departamentos = new ArrayList<>();
 
     //endregion
 

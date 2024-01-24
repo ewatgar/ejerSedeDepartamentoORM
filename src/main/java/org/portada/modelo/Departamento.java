@@ -2,6 +2,7 @@ package org.portada.modelo;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public class Departamento {
     //region Relaciones
 
     @OneToMany(mappedBy = "departamento")
-    private Collection<Empleado> empleados;
+    private Collection<Empleado> empleados = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "id_sede", nullable = false)
