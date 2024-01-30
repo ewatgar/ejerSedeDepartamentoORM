@@ -28,7 +28,7 @@ public class Empleado {
     //region Relaciones
 
     @OneToOne
-    @JoinColumn(name = "id_datos_profesionales", nullable = false)
+    @JoinColumn(name = "id_datos_profesionales")
     private DatosProfesionales datosProfesionales;
 
     @ManyToOne

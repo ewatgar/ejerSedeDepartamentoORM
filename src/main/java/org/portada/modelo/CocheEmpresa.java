@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Entity
+@Table(name = "coche_empresa", schema = "empresa_proyectos")
 public class CocheEmpresa {
 
     //region Atributos
@@ -19,7 +21,7 @@ public class CocheEmpresa {
     private String matricula;
 
     @Basic
-    @Column(name="asignado_hasta", nullable=false)
+    @Column(name="asignado_hasta")
     private LocalDate asignadoHasta;
 
     //endregion
@@ -27,7 +29,7 @@ public class CocheEmpresa {
     //region Relaciones
 
     @OneToOne
-    @JoinColumn(name = "id_empleado", nullable = false)
+    @JoinColumn(name = "id_empleado")
     private Empleado empleado;
 
     //endregion
