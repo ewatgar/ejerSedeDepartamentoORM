@@ -51,9 +51,9 @@ public class _04_CreaSedesRelaciones {
 
                 //region Bidireccional Sede-Departamento
                 s1.getDepartamentos().addAll(List.of(d1_1,d1_2));
-                s.refresh(s1);
+                //s.refresh(s1);
                 s2.getDepartamentos().addAll(List.of(d2_1,d2_2));
-                s.refresh(s2);
+                //s.refresh(s2);
 
                 //endregion
 

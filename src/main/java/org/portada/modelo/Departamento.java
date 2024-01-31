@@ -28,6 +28,7 @@ public class Departamento {
     @OneToMany(mappedBy = "departamento")
     private Collection<Empleado> empleados = new ArrayList<>();
 
+
     @ManyToOne
     @JoinColumn(name = "id_sede", nullable = false)
     private Sede sede;
